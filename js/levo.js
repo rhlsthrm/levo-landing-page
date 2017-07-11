@@ -5,6 +5,7 @@ function addEmailAddress() {
   console.log("Adding email address " + emailAddress);
   var newEmailRef = database.ref("email").push(emailAddress);
   console.log(newEmailRef.toString());
+  fbq("track", "Lead", {});
 }
 
 function buttonTextForScreenSize(windowWidth) {
